@@ -3,8 +3,8 @@ public class Radio implements IRadio {
     String Frecuencia = "FM";
     double FM = 92;
     int AM = 600;
-    int[] ListaAM = new int[12];
-    double[] ListaFM = new double[12];
+    int[] ListaAM = new int[13];
+    double[] ListaFM = new double[13];
     
 
 
@@ -109,6 +109,55 @@ public class Radio implements IRadio {
     public int getAMSlot(int slot) {
         return ListaAM[slot];
     }
+
+    public boolean isEncendida() {
+        return encendida;
+    }
+
+    public void setEncendida(boolean encendida) {
+        this.encendida = encendida;
+    }
+
+    public String getFrecuencia() {
+        return Frecuencia;
+    }
+
+    public void setFrecuencia(String frecuencia) {
+        Frecuencia = frecuencia;
+    }
+
+    public double getFM() {
+        return FM;
+    }
+
+    public void setFM(double fM) {
+        FM = fM;
+    }
+
+    public int getAM() {
+        return AM;
+    }
+
+    public void setAM(int aM) {
+        AM = aM;
+    }
+
+    public int[] getListaAM() {
+        return ListaAM;
+    }
+
+    public void setListaAM(int[] listaAM) {
+        ListaAM = listaAM;
+    }
+
+    public double[] getListaFM() {
+        return ListaFM;
+    }
+
+    public void setListaFM(double[] listaFM) {
+        ListaFM = listaFM;
+    }
+    
 
 
 
