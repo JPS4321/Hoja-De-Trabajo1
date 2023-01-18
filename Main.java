@@ -1,4 +1,5 @@
 import java.util.*;
+
 public class Main {
     
     public static void main(String[] args) {
@@ -13,7 +14,7 @@ public class Main {
         int AM = 600;
         
 
-
+        //Menu principal de opocione
         System.out.println("Bienvenido a su radio: ");
         while(ciclo == true){
             System.out.println("Elija una de las opciones que se le presentan");
@@ -26,6 +27,7 @@ public class Main {
             System.out.println("7. Apagar Radio");
             Respuestamenu = sc.nextInt();
 
+            //Opcion 1: Encender radio
             if(Respuestamenu == 1){
                 if(radio1.isOn() == false){
                     radio1.on();
@@ -35,6 +37,7 @@ public class Main {
                     System.out.println("La radio ya esta encendida");
                 }    
             }
+            //Opcion 2: Cambiar frecuencia
             if(Respuestamenu == 2){
                 if(radio1.isOn()== true){
                 System.out.println("Actualmente la radio esta en: "+radio1.getFrequence());
@@ -57,6 +60,7 @@ public class Main {
                 System.out.println("La radio esta apagada");
             }
             }
+            //Opcion 3: Avanzar y retroceder estacion
             if(Respuestamenu == 3){
                 if(radio1.isOn()== true){
                 System.out.println("");
@@ -82,6 +86,7 @@ public class Main {
             }
             
         }
+        //Opcion 4: Elije la emisora que se desea
             if(Respuestamenu == 4){
                 if(radio1.isOn()== true){
                 System.out.println("");
@@ -112,6 +117,7 @@ public class Main {
                     System.out.println("La radio esta apagada");
                 }
             }
+            //Opcion 5: Guardar la emisora en un arraylist
             if(Respuestamenu == 5){
                 if(radio1.isOn()== true){
                 System.out.println("En que posicion desea que se guarde la estacion actual? (1-12)");
@@ -133,6 +139,7 @@ public class Main {
                     System.out.println("La radio esta apagada");
                 }
             }
+            //Seleccionar emisora guardada en arraylist
             if(Respuestamenu == 6){
                 if(radio1.isOn()== true){
                 System.out.println("Elija una estacion de radio guardada: (1-12)");
@@ -165,6 +172,7 @@ public class Main {
                 System.out.println("La radio esta apagada");
             }
             }
+            //Apaga la radio
             if(Respuestamenu == 7){
                 if(radio1.encendida == true){
                     radio1.off();
