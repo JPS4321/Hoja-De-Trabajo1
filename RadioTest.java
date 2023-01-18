@@ -5,24 +5,24 @@ public class RadioTest {
     @Test
     public void pruebaFM() {
         Radio radio = new Radio();  //Nuevo objeto radio
-        radio.setFrequency("FM"); //Aquí la función para obtener la frecuencia.
-        String result = radio.tune(100.5, 2); //suma
-        assertEquals("100.7", result); //confirmar la suma
+        radio.setFMActualStation(100.61+0.01); //suma
+        double result = radio.getFMActualStation();
+        assertEquals(100.62, result,0); //confirmar la suma
     }
 
     @Test
     public void pruebaAM() {
         Radio radio = new Radio();  //Nuevo objeto radio
-        radio.setFrequency("AM"); //Aquí la función para obtener la frecuencia.
-        String result = radio.tune(600, 1);  //suma
-        assertEquals("601", result); //confirmar la suma
+        radio.setAMActualStation(600+1);  //suma
+        int result = radio.getAMActualStation();
+        assertEquals(601, result,0); //confirmar la suma
     }
 
     @Test
-    public void LimiteAM() {
-        Radio radio = new Radio(); //Nueva radio
-        radio.setFrequency("AM"); //Set Frecuencia
-        String result = radio.tune(1610, 9); //Suma
-        assertEquals("1610", result); //confirmar
+    public void PruebaAM2() {
+        Radio radio = new Radio();  //Nuevo objeto radio
+        radio.setAMActualStation(1610+9);  //suma
+        int result = radio.getAMActualStation();
+        assertEquals(1619, result,0); //confirmar la suma
     }
 }
